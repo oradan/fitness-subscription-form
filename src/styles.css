@@ -1,1 +1,229 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Spartan', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px
+}
+
+h1,
+h2,
+h3 {
+  /* margin: 20px 0px; */
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* header */
+
+.header-wrapper {
+  background-image: url("./assets/img/couple-running.jpg");
+  background-attachment: fixed;
+  background-position: 20% 15%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header-overlay {
+  position: absolute;
+  background-color: rgba(62, 103, 146, 0.6);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+
+.header-content {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.header .title-lg {
+  bottom: 0px;
+}
+
+.img-overlay .title-md {
+  color: #4679ae
+}
+
+/* colors */
+.text-white {
+  color: #ffffff
+}
+
+.text-blue-primary {
+  color: #4679ae;
+}
+
+.text-blue-dark {
+  color: #2b5687
+}
+.bg-blue-default{
+  background-color: #2b5687
+}
+.bg-blue-silver{
+  background-color: #77a3d4
+}
+.bg-blue-gold{
+  background-color: #1f3e61
+}
+.bg-blue-custom{
+  background-color: #376fae
+}
+/* titles */
+.title-lg {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.title-md {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.title{
+    font-size: 23px;
+    font-weight: 500;
+}
+
+/* utilities */
+.text-center {
+  text-align: center
+}
+
+.p-relative {
+  position: relative;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/* tabs */
+.plans-tab-wraper{
+    display: flex;
+}
+.plans-tab-wraper .plan-tab{
+    width: 25%;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+.plan-content{
+  height: 300px;
+}
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .title-lg {
+    font-size: 30px;
+  }
+
+  .title-md {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .img-overlay {
+    margin-top: -280px;
+    position: relative;
+  }
+
+  .header .title-lg {
+    top: 235px;
+  }
+
+  .img-overlay .title-md {
+    color: #ffffff
+  }
+
+  .title-lg {
+    font-size: 45px;
+  }
+
+  .title-md {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+    font-weight: 300;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .img-overlay {
+    margin-top: -300px;
+    position: relative;
+  }
+
+  .header .title-lg {
+    top: 200px;
+  }
+
+  .title-lg {
+    font-size: 50px;
+  }
+
+  .title-md {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-wrapper {
+    background-position: 20% 0%;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+
+  .header .title-lg {
+    top: 120px;
+  }
+
+  .img-overlay {
+    margin-top: -360px;
+    position: relative;
+  }
+}

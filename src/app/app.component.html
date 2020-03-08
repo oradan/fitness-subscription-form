@@ -1,20 +1,45 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<section class="header-wrapper">
+  <div class="header-overlay"></div>
+  <div class="header">
+    <div class="container">
+      <div class="header-content text-center text-white">
+        <h1 class="p-relative title-lg">If it doesn't challenge you, <br> it doesn't change you!</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="banner">
+  <div class="container text-center">
+    <div class="img-overlay">
+      <h2 class="title-md ">Sport meets IT</h2>
+      <img src="../assets/img/header.png" class="img-fluid">
+    </div>
 
+  </div>
+</section>
+<section class="main-content">
+  <div class="container">
+    <h3 class="title-lg text-blue-dark text-center">Get your plan</h3>
+    <h3 class="subtitle text-blue-dark text-center">The pain of today is the victory of tomorrow!</h3>
+    <div class="plans-tab-wraper">
+      <div class='bg-blue-{{plan.name}} plan-tab text-white' *ngFor="let plan of plans" (click)="setSelectedPlan(plan)">
+        <div class="title"> {{plan.name|titlecase }}</div>
+      </div>
+    </div>
+    <div class="plan-content bg-blue-{{selectedPlan.name}}" [ngSwitch]="selectedPlan.name">
+        <app-default-plan *ngSwitchCase="'default'"></app-default-plan>
+        <app-silver-plan *ngSwitchCase="'silver'"></app-silver-plan>
+        <app-gold-plan *ngSwitchCase="'gold'"></app-gold-plan>
+        <app-custom-plan *ngSwitchCase="'custom'"></app-custom-plan>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- <app-user-form></app-user-form>
+<app-user-custom-form></app-user-custom-form> -->
