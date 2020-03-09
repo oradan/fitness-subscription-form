@@ -3,19 +3,16 @@
   <div class="header-overlay"></div>
   <div class="header">
     <div class="container">
-      <div class="header-content text-center text-white">
-        <h1 class="p-relative title-lg">If it doesn't challenge you, <br> it doesn't change you!</h1>
-      </div>
     </div>
   </div>
 </section>
 <section class="banner">
   <div class="container text-center">
     <div class="img-overlay">
+      <h1 class="p-relative title-lg text-center text-white">If it doesn't challenge you, <br> it doesn't change you!</h1>
       <h2 class="title-md ">Sport meets IT</h2>
       <img src="../assets/img/header.png" class="img-fluid">
     </div>
-
   </div>
 </section>
 <section class="main-content">
@@ -28,10 +25,10 @@
       </div>
     </div>
     <div class="plan-content bg-blue-{{selectedPlan.name}}" [ngSwitch]="selectedPlan.name">
-        <app-default-plan *ngSwitchCase="'default'"></app-default-plan>
-        <app-silver-plan *ngSwitchCase="'silver'"></app-silver-plan>
-        <app-gold-plan *ngSwitchCase="'gold'"></app-gold-plan>
-        <app-custom-plan *ngSwitchCase="'custom'"></app-custom-plan>
+      <app-default-plan *ngSwitchCase="'default'"></app-default-plan>
+      <app-silver-plan *ngSwitchCase="'silver'"></app-silver-plan>
+      <app-gold-plan *ngSwitchCase="'gold'"></app-gold-plan>
+      <app-custom-plan *ngSwitchCase="'custom'"></app-custom-plan>
     </div>
   </div>
 </section>
