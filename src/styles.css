@@ -102,8 +102,8 @@ h3 {
 }
 
 .title{
-    font-size: 23px;
-    font-weight: 300;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 /* utilities */
@@ -142,9 +142,9 @@ h3 {
   left: 50%;
   width: 0;
   bottom: 0;
-  height: 1px;
+  height: 2px;
   background-color: #2b5687;
-  transition: 0.4s; 
+  transition: 0.4; 
 }
 
 .plans-tab-wraper .plan-tab.active .focus-border{
@@ -153,14 +153,14 @@ h3 {
   left: 0;
 }
 .plans-tab-wraper .plan-tab.active .title{
-  font-weight: 500;
-  font-size: 28px;
   color:#BF5F7C;
+  transition: 0.4s;
 }
 
 .plan-content{
-  padding: 15px 0px;
- flex: 0 0 80%;
+  padding: 15px;
+  margin: 5px;
+  flex: 0 0 80%;
 }
 
 .plans-container{

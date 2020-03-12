@@ -21,7 +21,7 @@
     <h3 class="title-lg text-blue-dark text-center">Get your plan</h3>
     <h3 class="subtitle text-secondary text-center">The pain of today is the victory of tomorrow!</h3>
     <div class="plans-container">
-      <div class="plans-tab-wraper">
+      <div class="plans-tab-wraper text-blue-dark">
         <div class='plan-tab' *ngFor="let plan of plans"
           (click)="setSelectedPlan(plan)"
             [class.active]="plan.name===selectedPlan.name">
