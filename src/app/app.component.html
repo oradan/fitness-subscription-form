@@ -19,7 +19,7 @@
 <section class="main-content">
   <div class="container">
     <h3 class="title-lg text-blue-dark text-center">Get your plan</h3>
-    <h3 class="subtitle text-secondary text-center">The pain of today is the victory of tomorrow!</h3>
+    <h3 class="subtitle text-blue-dark text-center">The pain of today is the victory of tomorrow!</h3>
     <div class="plans-container">
       <div class="plans-tab-wraper text-blue-dark">
         <div class='plan-tab' *ngFor="let plan of plans"
@@ -30,6 +30,7 @@
         </div>
       </div>
       <div class="plan-content " [ngSwitch]="selectedPlan.name">
+        <h3 class="title text-center text-blue-dark">Pain is weakness leaving the body </h3>
         <app-default-plan *ngSwitchCase="'default'"></app-default-plan>
         <app-silver-plan *ngSwitchCase="'silver'"></app-silver-plan>
         <app-gold-plan *ngSwitchCase="'gold'"></app-gold-plan>
