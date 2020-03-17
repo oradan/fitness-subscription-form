@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: 'Spartan', sans-serif;
-  color:#403e3e;
+  color: #403e3e;
 }
 
 * {
@@ -14,14 +18,6 @@ h1,
 h2,
 h3 {
   margin: 30px 0px;
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /* header */
@@ -64,9 +60,11 @@ h3 {
 .text-white {
   color: #ffffff
 }
-.text-secondary{
-  color:#BF5F7C;
+
+.text-secondary {
+  color: #BF5F7C;
 }
+
 .text-blue-primary {
   color: #4679ae;
 }
@@ -74,37 +72,42 @@ h3 {
 .text-blue-dark {
   color: #2b5687
 }
-.bg-blue-default{
+
+.bg-blue-default {
   background-color: #2b5687
 }
-.bg-blue-silver{
+
+.bg-blue-silver {
   background-color: #77a3d4
 }
-.bg-blue-gold{
+
+.bg-blue-gold {
   background-color: #1f3e61
 }
-.bg-blue-custom{
+
+.bg-blue-custom {
   background-color: #376fae
 }
+
 /* titles */
 .title-lg {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
 .title-md {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
 }
 
-.title{
-    font-size: 25px;
-    font-weight: 400;
+.title {
+  font-size: 1.5625rem;
+  font-weight: 400;
 }
 
 /* utilities */
@@ -120,106 +123,154 @@ h3 {
   max-width: 100%;
   height: auto;
 }
-.separator{
+
+.separator {
   height: 100px;
 }
 
-.mb-2{
-  
-}
+.mb-2 {}
+
 /* tabs */
-.plans-tab-wraper{
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    background-color: #ebecec;
+.plans-tab-wraper {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  background-color: #ebecec;
 }
-.plans-tab-wraper .plan-tab{
-    cursor: pointer;
-    padding: 10px 0px;
-    text-align: center;
-    position: relative;
-    width: 15%;
-   
+
+.plans-tab-wraper .plan-tab {
+  cursor: pointer;
+  padding: 10px 0px;
+  text-align: center;
+  position: relative;
+  width: 15%;
+
 }
-.plans-tab-wraper .plan-tab .focus-border{
+
+.plans-tab-wraper .plan-tab .focus-border {
   position: absolute;
   left: 50%;
   width: 0;
   bottom: 0;
   height: 1px;
   background-color: #2b5687;
-  transition: 0.4; 
+  transition: 0.4;
 }
 
-.plans-tab-wraper .plan-tab.active .focus-border{
+.plans-tab-wraper .plan-tab.active .focus-border {
   width: 100%;
   transition: 0.4s;
   left: 0;
 }
-.plans-tab-wraper .plan-tab.active .title{
-  color:#BF5F7C;
+
+.plans-tab-wraper .plan-tab.active .title {
+  color: #BF5F7C;
   transition: 0.4s;
 }
 
-.plan-content{
+.plan-content {
   padding: 10px;
-  flex: 0 0 80%;
-}
-
-.plan-container{
-  display: flex;
-  flex-direction: row;
 }
 
 /* Lists */
 
-.ul-check-icon{
+.ul-check-icon {
   list-style: none;
 }
 
-.ul-check-icon li{
+.ul-check-icon li {
   padding-left: 1.7rem;
   position: relative;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 10px 0px;
 }
-.ul-check-icon li::before{
+
+.ul-check-icon li::before {
   position: absolute;
-	display: block;
-	left: 0;
-	width: 20px;
-	height: 16px;
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 14'%3e%3cpath fill='rgba(43, 86, 135, 1)' d='M5.917,13.264 C4.181,11.466 2.445,9.668 0.710,7.870 C-0.004,7.129 1.157,6.025 1.874,6.769 C3.418,8.369 4.962,9.969 6.507,11.569 C8.105,9.961 14.938,2.248 16.537,0.639 C17.265,-0.093 18.426,1.011 17.700,1.741 C15.905,3.547 8.876,11.458 7.081,13.264 C6.782,13.563 6.212,13.570 5.917,13.264 Z'/%3e%3c/svg%3e");
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: 100%;
-	content: "";
+  display: block;
+  left: 0;
+  width: 20px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 14'%3e%3cpath fill='rgba(43, 86, 135, 1)' d='M5.917,13.264 C4.181,11.466 2.445,9.668 0.710,7.870 C-0.004,7.129 1.157,6.025 1.874,6.769 C3.418,8.369 4.962,9.969 6.507,11.569 C8.105,9.961 14.938,2.248 16.537,0.639 C17.265,-0.093 18.426,1.011 17.700,1.741 C15.905,3.547 8.876,11.458 7.081,13.264 C6.782,13.563 6.212,13.570 5.917,13.264 Z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  content: "";
 }
 
-@media screen and (min-width: 576px) {
-  .container {
-    max-width: 540px;
+/*-----------------------
+FORMS: Floating Labels
+-------------------------*/
+
+.form-custom .form-control {
+  border-width: 0 0 1px 0;
+  border-color: #cecece;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  height: 40px;
+  width: 100%;
+  font-size: 1rem;
+  color:inherit;
+  color: #2b5687;
+}
+.form-custom .form-control:focus{
+  outline: none;  
+  border-width: 0 0 1px 0;
+  border-color: #BF5F7C;
+}
+
+.floating-labels .form-group {
+  position: relative;
+}
+
+.floating-labels .label-floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: text;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  pointer-events: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  z-index: 2;
+}
+
+.floating-labels .label-floating.focused {
+  padding-left: 0;
+  font-size: 0.875rem;
+  -webkit-transform: translateY(-76%);
+  transform: translateY(-76%);
+  opacity: 0.8;
+}
+
+@media (min-width: 576px) {
+  .floating-labels .form-group {
+    margin-bottom: 1.563rem;
   }
+}
+
+
+@media screen and (min-width: 576px) {
+
 
   .title-lg {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   .title-md {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .subtitle {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
 
   .img-overlay {
     margin-top: -280px;
@@ -231,17 +282,18 @@ h3 {
   }
 
   .title-lg {
-    font-size: 45px;
+    font-size: 2.8125rem;
   }
 
   .title-md {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 
   .subtitle {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 300;
   }
+
   .header-wrapper {
     display: block;
   }
@@ -249,9 +301,7 @@ h3 {
 }
 
 @media screen and (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
+
 
   .img-overlay {
     margin-top: -400px;
@@ -259,15 +309,15 @@ h3 {
   }
 
   .title-lg {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 
   .title-md {
-    font-size: 40px;
+    font-size: 2.4rem;
   }
 
   .subtitle {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 300;
   }
 }
@@ -275,10 +325,6 @@ h3 {
 @media screen and (min-width: 1200px) {
   .header-wrapper {
     background-position: 20% 0%;
-  }
-
-  .container {
-    max-width: 1140px;
   }
 
   .img-overlay {
@@ -289,10 +335,46 @@ h3 {
 
 @media screen and (min-width: 1400px) {
   .title-lg {
-    font-size: 60px;
+    font-size: 3.75rem;
   }
+
   .img-overlay {
     margin-top: -650px;
     position: relative;
   }
 }
+
+
+/* Buttons */
+.btn {
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding: 10px 25px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.btn-primary{
+  color:#ffffff;
+  background-color: #2b5687;
+}
+.btn-primary:hover{
+  color: #BF5F7C;
+  background-color: transparent;
+  border-color: #2b5687;
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
