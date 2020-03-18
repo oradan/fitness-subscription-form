@@ -13,9 +13,7 @@ export class UserFormComponent implements OnInit {
     console.log(this.user)
   }
   ngOnInit() {
-    console.log(this.user)
+    this.user.firstName="Olga"
   }
-onFocus(event:any){
-  console.log(event)
-}
+
 }

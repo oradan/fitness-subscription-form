@@ -1,22 +1,37 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
+
 
 @Directive({
   selector: '[floatingLabels]'
 })
-export class FloatinLabelsDirective {
+export class FloatinLabelsDirective implements OnInit {
+  @Input('floatingLabels') bindinEl: any;
+  
+  label = this.elRef.nativeElement.previousElementSibling;
 
   constructor(private elRef: ElementRef) { }
-  @HostListener('focus', ['$event.srcElement.labels[0]'])
-  onFocus(el) {
-    el.classList.add("focused")
+
+  ngOnInit() { this.initDirective() }
+
+  @HostListener('focus') onFocus() { this.addClassFocused() }
+  @HostListener('blur') onBlur() { this.removeClassFocused() }
+
+  private initDirective() {
+    let propName = this.elRef.nativeElement.name;
+    if ((this.elRef.nativeElement.value.length || this.bindinEl[propName].length > 0)) {
+      this.label.classList.add("focused")
+    }
   }
-  @HostListener('blur', ['$event.srcElement.labels[0]'])
-  onBlur(el) {
-    this.elRef.nativeElement.value.replace(/\s/g, "");
-    console.log(this.elRef.nativeElement.value === "")
-    console.log(this.elRef.nativeElement.value.replace(/\s/g, "").length)
+
+  private addClassFocused() {
+    this.label.classList.add("focused")
+  }
+
+  private removeClassFocused() {
+    let val = this.elRef.nativeElement.value.replace(/^\s*[^\S]/mig, "");
+    this.elRef.nativeElement.value = val;
     if (this.elRef.nativeElement.value === "") {
-      el.classList.remove("focused");
+      this.label.classList.remove("focused");
     }
   }
 }
