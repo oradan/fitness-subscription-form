@@ -15,12 +15,13 @@ export class FloatinLabelsDirective implements OnInit {
 
   @HostListener('focus') onFocus() { this.addClassFocused() }
   @HostListener('blur') onBlur() { this.removeClassFocused() }
+  //@HostListener('change') onChange() { this.initDirective()}
 
   private initDirective() {
     let propName = this.elRef.nativeElement.name;
     if ((this.elRef.nativeElement.value.length || this.bindinEl[propName].length > 0)) {
       this.label.classList.add("focused")
-    }
+    }else{ this.label.classList.remove("focused");}
   }
 
   private addClassFocused() {

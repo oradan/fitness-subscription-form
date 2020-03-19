@@ -13,7 +13,6 @@ export class UserFormComponent implements OnInit {
     console.log(this.user)
   }
   ngOnInit() {
-    this.user.firstName="Olga"
   }
 
 }
