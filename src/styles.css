@@ -6,6 +6,7 @@ html {
 body {
   font-family: 'Spartan', sans-serif;
   color: #403e3e;
+  position: relative;
 }
 
 * {
@@ -17,10 +18,24 @@ body {
 h1,
 h2,
 h3 {
-  margin: 40px 0px;
+  margin: 50px 0px;
 }
 
 /* header */
+.main-content:after{
+    position: absolute;
+    display: block;
+    right:0%;
+    top:0%;
+    width: 500px;
+    height: 1000px;
+    z-index: -1;
+    background-color: #F7F7F7;
+    border-bottom-left-radius: 1000px;
+    border-top-left-radius: 1000px;
+    content: "";
+}
+
 
 .header-wrapper {
   background-image: url("./assets/img/couple-running.jpg");
@@ -33,7 +48,7 @@ h3 {
   display: none;
 }
 
-.header-overlay {
+.overlay {
   position: absolute;
   background-color: rgba(62, 103, 146, 0.6);
   top: 0;
@@ -128,7 +143,45 @@ h3 {
   height: 100px;
 }
 
-.mb-2 {}
+.mx-auto {
+  margin: 0 auto;
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+.my-2 {
+  margin: 20px 0;
+}
+
+.mx-2 {
+  margin: 0px 20px;
+}
+
+.py-2 {
+  padding: 20px 0;
+}
+
+.px-2 {
+  padding: 0px 20px;
+}
+
+.py-5 {
+  padding: 50px 0;
+}
+
+.px-5 {
+  padding: 0px 50px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.z-index {
+  z-index: 1;
+}
 
 /* tabs */
 .plans-tab-wraper {
@@ -171,10 +224,11 @@ h3 {
 .plan-content {
   padding: 10px;
 }
-.plan{
+
+.plan {
   align-items: center;
-  padding: 40px 0px;
 }
+
 /* Lists */
 
 .ul-check-icon {
@@ -207,19 +261,20 @@ FORMS: Floating Labels
 
 .form-custom .form-control {
   border-width: 0 0 1px 0;
-  border-color: #cecece;
+  border-color: #2b5687;
   background-color: transparent;
   border-radius: 0;
   box-shadow: none;
   height: 40px;
   width: 100%;
   font-size: 1.125rem;
-  color:inherit;
+  color: inherit;
   color: #2b5687;
   font-family: inherit;
 }
-.form-custom .form-control:focus{
-  outline: none;  
+
+.form-custom .form-control:focus {
+  outline: none;
   border-width: 0 0 1px 0;
   border-color: #BF5F7C;
 }
@@ -240,6 +295,7 @@ FORMS: Floating Labels
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   z-index: 2;
+  color: #BF5F7C;
 }
 
 .floating-labels .label-floating.focused {
@@ -248,6 +304,53 @@ FORMS: Floating Labels
   -webkit-transform: translateY(-85%);
   transform: translateY(-85%);
   opacity: 0.8;
+}
+
+
+/* PRICE CUSTOM */
+.price-custom,
+.price-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 200;
+}
+
+.price-custom {
+  justify-content: center;
+  color: #2b5687;
+}
+
+.currency,
+.price-details>div:first-child {
+  font-size: 3rem;
+  margin-top: 6px;
+  font-weight: 300;
+}
+
+.price-value {
+  font-size: 5.5rem;
+}
+
+.price-details>div:first-child {
+  margin-bottom: 5px;
+}
+
+.price-details>div {
+  font-weight: normal;
+}
+
+/* FOOTER */
+.footer {
+  min-height: 200px;
+  background-image: url("./assets/img/footer-img.png");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 576px) {
@@ -335,6 +438,24 @@ FORMS: Floating Labels
     margin-top: -500px;
     position: relative;
   }
+
+  .footer {
+    background-position: 50% 70%;
+  }
+
+  .main-content:before{
+    position: absolute;
+    display: block;
+    left:0%;
+    bottom:80%;
+    width: 400px;
+    height: 800px;
+    z-index: -1;
+    background-color: #bf5f7c1a;
+    border-bottom-right-radius: 800px;
+    border-top-right-radius: 800px;
+    content: "";
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -346,13 +467,18 @@ FORMS: Floating Labels
     margin-top: -650px;
     position: relative;
   }
+
+  .footer {
+    background-position: 50% 80%;
+    min-height: 260px;
+  }
 }
 
 
 /* Buttons */
 .btn {
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   padding: 10px 25px;
   text-align: center;
   vertical-align: middle;
@@ -360,17 +486,26 @@ FORMS: Floating Labels
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 5px;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
-.btn-primary{
-  color:#ffffff;
-  background-color: #2b5687;
-}
-.btn-primary:hover{
+.btn-primary {
   color: #BF5F7C;
   background-color: transparent;
-  border-color: #2b5687;
+  border-bottom-color: #2b5687;
+  border-radius: 0px;
+}
+
+.btn-custom {
+  text-align: left;
+  padding-left: 0.75rem;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #2b5687;
+  border-radius: 5px;
+
 }
 
 @media screen and (min-width: 576px) {}

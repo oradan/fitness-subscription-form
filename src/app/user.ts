@@ -5,6 +5,5 @@ export class User {
     firstName: string = "";
     lastName: string = "";
     email: string = "";
-    telephone: string="";
     plan:Plan=new Plan()
 }

@@ -1,31 +1,25 @@
 <form class="form-custom floating-labels" (ngSubmit)="onSubmit()" #userForm="ngForm">
   <div class="row">
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
       <div class="form-group">
         <label for="first-name" class="label-floating">First Name*</label>
         <input class="form-control" id="first-name" name="firstName" type="text" [(ngModel)]="user.firstName" #firstName="ngModel" [floatingLabels]="user" required>
       </div>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
       <div class="form-group">
         <label for="last-name" class="label-floating">Last Name*</label>
         <input class="form-control" id="last-name" name="lastName" type="text" [(ngModel)]="user.lastName" [floatingLabels]="user" required>
       </div>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
       <div class="form-group">
         <label for="email" class="label-floating">Email*</label>
         <input class="form-control" id="email" name="email" type="email" [(ngModel)]="user.email" [floatingLabels]="user" required>
       </div>
     </div>
-    <div class="col-6 col-md-3">
-      <div class="form-group">
-        <label for="phone" class="label-floating">Phone Number</label>
-        <input class="form-control" id="phone" name="telephone" type="tel" [(ngModel)]="user.telephone" [floatingLabels]="user">
-      </div>
-    </div>
-    <div class="col-6">
-      <button class="btn btn-primary">Subscribe</button>
+    <div class="col-6 col-md-2 mx-auto">
+      <button class="btn btn-primary btn-custom w-100 my-2">Subscribe</button>
     </div>
   </div>
 </form>
