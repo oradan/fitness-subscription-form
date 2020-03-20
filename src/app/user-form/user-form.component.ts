@@ -12,6 +12,9 @@ export class UserFormComponent implements OnInit {
   onSubmit(){
     console.log(this.user)
   }
+  trimString(str:string){
+    console.log(str)
+  }
   ngOnInit() {
   }
 

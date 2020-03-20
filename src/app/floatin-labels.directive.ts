@@ -5,7 +5,7 @@ import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/cor
   selector: '[floatingLabels]'
 })
 export class FloatinLabelsDirective implements OnInit {
-  @Input('floatingLabels') bindinEl: any;
+  @Input('floatingLabels') bindingEl: any;
   
   label = this.elRef.nativeElement.previousElementSibling;
 
@@ -19,7 +19,7 @@ export class FloatinLabelsDirective implements OnInit {
 
   private initDirective() {
     let propName = this.elRef.nativeElement.name;
-    if ((this.elRef.nativeElement.value.length || this.bindinEl[propName].length > 0)) {
+    if ((this.elRef.nativeElement.value.length || this.bindingEl[propName].length > 0)) {
       this.label.classList.add("focused")
     }else{ this.label.classList.remove("focused");}
   }

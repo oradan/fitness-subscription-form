@@ -119,7 +119,9 @@ h3 {
   font-size: 1.125rem;
   font-weight: 300;
 }
-
+.subtitle-small{
+  font-size: 1.2rem;
+}
 .title {
   font-size: 1.5625rem;
   font-weight: 400;
@@ -182,7 +184,21 @@ h3 {
 .z-index {
   z-index: 1;
 }
+.blue-line{
+width: 100%;
+height: 10px;
+background-color: #2b5687;
+}
+.pink-line{
+  width: 100%;
+  height: 10px;
+  background-color: #BF5F7C;
+}
 
+img{
+  width: 100%;
+  height: auto;
+}
 /* tabs */
 .plans-tab-wraper {
   display: flex;
@@ -353,6 +369,30 @@ FORMS: Floating Labels
   align-items: center;
 }
 
+/* OFFERS */
+.offers{
+  background-color: rgba(191, 95, 124, 0.6);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px;
+}
+.offers .img-holder{
+  width: 70px;
+  height: 70px;
+}
+
+.gold .offer-holder{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+text-align: right;
+}
+.gold .offer-holder p{
+  font-size: 1.2rem;
+  padding: 5px 0px;
+  color: #2b5687;
+}
 @media (min-width: 576px) {
   .floating-labels .form-group {
     margin-bottom: 1.563rem;
