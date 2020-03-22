@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.plans = this.dataService.getAllPlansId();
-    this.selectedPlan = this.plans[2]
+    this.selectedPlan = this.plans[0]
     console.log(this.plans)
   }
 }
