@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 
 
 @Directive({
@@ -6,22 +6,26 @@ import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 })
 export class FloatinLabelsDirective implements OnInit {
   @Input('floatingLabels') bindingEl: any;
-  
+  _submmitted: boolean;
   label = this.elRef.nativeElement.previousElementSibling;
 
   constructor(private elRef: ElementRef) { }
 
   ngOnInit() { this.initDirective() }
 
+  @Input()
+  set reset(sub: boolean) {
+    this.label.classList.remove("focused")
+  };
   @HostListener('focus') onFocus() { this.addClassFocused() }
   @HostListener('blur') onBlur() { this.removeClassFocused() }
-  //@HostListener('change') onChange() { this.initDirective()}
-
+  @HostListener('change') onChange() { this.initDirective(); console.log("change")}
+  //this.bindingEl[propName].length > 0 in case when the filds are prefield by another service
   private initDirective() {
     let propName = this.elRef.nativeElement.name;
     if ((this.elRef.nativeElement.value.length || this.bindingEl[propName].length > 0)) {
       this.label.classList.add("focused")
-    }else{ this.label.classList.remove("focused");}
+    } else { this.label.classList.remove("focused"); }
   }
 
   private addClassFocused() {

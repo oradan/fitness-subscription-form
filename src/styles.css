@@ -322,7 +322,15 @@ FORMS: Floating Labels
   opacity: 0.8;
 }
 
-
+/* VALIDATIONS */
+.was-validated input.ng-invalid{
+  border-color: red;
+}
+.alert{
+  padding: 0.5rem 0.75rem;
+  color:red;
+  font-size: 0.75rem;
+}
 /* PRICE CUSTOM */
 .price-custom,
 .price-body {

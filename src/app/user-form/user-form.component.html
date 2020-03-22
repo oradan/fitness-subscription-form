@@ -1,21 +1,47 @@
-<form class="form-custom floating-labels" (ngSubmit)="onSubmit()" #userForm="ngForm">
+<form class="form-custom floating-labels" (ngSubmit)="onSubmit(userForm)" #userForm="ngForm" [class.was-validated]="!isValid">
   <div class="row">
     <div class="col-6 col-md-2">
       <div class="form-group">
         <label for="first-name" class="label-floating">First Name*</label>
-        <input class="form-control" id="first-name" name="firstName" type="text" [ngModel]="user.firstName" (ngModelChange)="user.firstName=$event.trim()" #firstName="ngModel" [floatingLabels]="user" required>
+        <input class="form-control" id="first-name" name="firstName" type="text" 
+        #firstName="ngModel"
+        [(ngModel)]="user.firstName" 
+        [floatingLabels]="user" 
+        [reset]="reset"
+        required>
+        <div *ngIf="!isValid && firstName.invalid" class="alert">
+          First Name is required!
+        </div>
       </div>
     </div>
     <div class="col-6 col-md-2">
       <div class="form-group">
         <label for="last-name" class="label-floating">Last Name*</label>
-        <input class="form-control" id="last-name" name="lastName" type="text" [ngModel]="user.lastName" (ngModelChange)="user.lastName=$event.trim()" [floatingLabels]="user" required>
+        <input class="form-control" id="last-name" name="lastName" type="text"
+         #lastName="ngModel"
+         [(ngModel)]="user.lastName" 
+         [floatingLabels]="user" 
+         [reset]="reset"
+         required>
+         <div *ngIf="!isValid && lastName.invalid" class="alert">
+          Last Name is required!
+        </div>
       </div>
     </div>
     <div class="col-6 col-md-2">
       <div class="form-group">
         <label for="email" class="label-floating">Email*</label>
-        <input class="form-control" id="email" name="email" type="email" [ngModel]="user.email" (ngModelChange)="user.email=$event.trim()" [floatingLabels]="user" required>
+        <input class="form-control" id="email" name="email" type="email" 
+        #email="ngModel"
+        [(ngModel)]="user.email" 
+        [floatingLabels]="user"
+        [reset]="reset" 
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required>
+        <div *ngIf="!isValid && email.invalid" class="alert">
+          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.pattern">Please provide e valid email address</div>
+        </div>
       </div>
     </div>
     <div class="col-6 col-md-2 mx-auto">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-default-plan',
@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./default-plan.component.css']
 })
 export class DefaultPlanComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
