@@ -6,21 +6,20 @@ import { DATA } from './data'
 })
 export class DataService {
   plans = DATA.plans
-  constructor() { }
+  options = DATA.options
+  constructor() {}
 
-  getAllPlans() {
-    return this.plans
-  }
-  defaultPlanId(){
+  defaultPlanId() {
     return DATA.defaultPlanId
   }
   getPlanByName(planName: string) {
     return this.plans.find(e => e.name === planName);
   }
 
- getAllPlansId(){
-   return this.plans.map(e=>{
-    return {id:e.id,name:e.name}
-   })
- }
+  getAllPlans() {
+    return this.plans
+  }
+  getAllOptions(){
+    return this.options
+  }
 }

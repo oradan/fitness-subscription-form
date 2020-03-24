@@ -10,11 +10,11 @@ import { Plan } from '../plan';
 })
 export class UserCustomFormComponent implements OnInit {
   user:User = new User();
-  customPlan:Plan;
+  plan:Plan;
   constructor(public dataService:DataService) { }
 
   ngOnInit() {
-    this.customPlan=this.dataService.getPlanByName("custom");
+  
   }
 
 }
