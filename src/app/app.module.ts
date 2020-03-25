@@ -10,6 +10,7 @@ import { SilverPlanComponent } from './silver-plan/silver-plan.component';
 import { GoldPlanComponent } from './gold-plan/gold-plan.component';
 import { CustomPlanComponent } from './custom-plan/custom-plan.component';
 import { FloatinLabelsDirective } from './floatin-labels.directive';
+import { RemoveinnerlinePipe } from './removeinnerline.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FloatinLabelsDirective } from './floatin-labels.directive';
     SilverPlanComponent,
     GoldPlanComponent,
     CustomPlanComponent,
-    FloatinLabelsDirective
+    FloatinLabelsDirective,
+    RemoveinnerlinePipe
   ],
   imports: [
     BrowserModule,

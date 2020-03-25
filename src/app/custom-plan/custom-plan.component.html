@@ -1,41 +1,54 @@
-<div class="custom plan row">
-  <div class="col-6  option-container ">
-    <!-- <div class="label">Type</div> -->
-    <div class="form-check">
-      <label class='form-check-label'>
-        <input name='type' type='radio'>
-        <span class='inner-label'>Day Time</span>
-    </label>
-    <label class='form-check-label'>
-      <input name='type' type='radio' checked>
-      <span class='inner-label'>Full Time</span>
-  </label>
+<div class="custom">
+  <div>
+    <p class="subtitle-small text-secondary text-center my-2">Now you can create your own plan in a few clicks</p>
+  </div>
+  <div class="option-main clearfix">
+    <div class="option-box ">
+      <div class="box-item" >
+        <div class="title text-blue-dark">Select the type</div>
+        <div class="form-check">
+          <label class='form-check-label' *ngFor="let type of optionType.articles">
+            <input name='type' type='radio'>
+            <span class='inner-label'>{{type.name|removeinnerline}}</span>
+          </label>
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="title text-blue-dark">Choose the classes</div>
+        <div class="form-check">
+          <label class='form-check-label' *ngFor="let class of optionClasses.articles">
+            <input name={{class.name}} type='checkbox'>
+            <span class='inner-label'>{{class.name | removeinnerline}}</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="option-box ">
+      <div class="box-item">
+        <div class="title text-blue-dark">Decide where to be more</div>
+        <div class="form-check">
+          <label class='form-check-label' *ngFor="let access of optionAccesses.articles">
+            <input name={{access.name}} type='checkbox'>
+            <span class='inner-label'>{{access.name|removeinnerline}}</span>
+          </label>
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="title text-blue-dark">Personal Trainer program</div>
+        <div class="form-check">
+          <label class='form-check-label' *ngFor="let persTr of optionPeronalTrainer.articles">
+            <input name={{persTr.name}} type='checkbox'>
+            <span class='inner-label'>{{persTr.name|removeinnerline}}</span>
+          </label>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="col-6  option-container ">
-    <div class="form-check">
-      <label class='form-check-label'>
-        <input name='type' type='checkbox'>
-        <span class='inner-label'>Cicling</span>
-    </label>
-    <label class='form-check-label'>
-      <input name='type' type='checkbox' >
-      <span class='inner-label'>Yoga</span>
-  </label>
-  <label class='form-check-label'>
-    <input name='type' type='checkbox' >
-    <span class='inner-label'>Body Pump</span>
-</label>
-<label class='form-check-label'>
-  <input name='type' type='checkbox' >
-  <span class='inner-label'>Aerobic</span>
-</label>
-<label class='form-check-label'>
-  <input name='type' type='checkbox' >
-  <span class='inner-label'>TRX</span>
-</label>
-    </div>
+  <div class="option-price">
+    <div class="title">Total price</div>
+    <div class="title">$ 77 </div>
   </div>
-  <div class="col-6  option-container ">Access</div>
-  <div class="col-6  option-container ">Personal Trainer</div>
+  <div class="col-6  col-lg-4 mx-auto py-5">
+    <app-user-form ></app-user-form>
+  </div>
 </div>

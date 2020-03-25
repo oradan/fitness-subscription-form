@@ -22,18 +22,18 @@ h3 {
 }
 
 /* header */
-.main-content:after{
-    position: absolute;
-    display: block;
-    right:0%;
-    top:0%;
-    width: 500px;
-    height: 1000px;
-    z-index: -1;
-    background-color: #F7F7F7;
-    border-bottom-left-radius: 1000px;
-    border-top-left-radius: 1000px;
-    content: "";
+.main-content:after {
+  position: absolute;
+  display: block;
+  right: 0%;
+  top: 0%;
+  width: 500px;
+  height: 1000px;
+  z-index: -1;
+  background-color: #F7F7F7;
+  border-bottom-left-radius: 1000px;
+  border-top-left-radius: 1000px;
+  content: "";
 }
 
 
@@ -103,12 +103,15 @@ h3 {
 .bg-blue-custom {
   background-color: #376fae
 }
-.bg-pink-light{
+
+.bg-pink-light {
   background-color: rgba(191, 95, 124, 0.2)
 }
-.bg-blue-light{
+
+.bg-blue-light {
   background-color: rgba(62, 103, 146, 0.6);
 }
+
 /* titles */
 .title-lg {
   font-size: 1.25rem;
@@ -124,9 +127,11 @@ h3 {
   font-size: 1.125rem;
   font-weight: 300;
 }
-.subtitle-small{
+
+.subtitle-small {
   font-size: 1.2rem;
 }
+
 .title {
   font-size: 1.5625rem;
   font-weight: 400;
@@ -189,21 +194,24 @@ h3 {
 .z-index {
   z-index: 1;
 }
-.blue-line{
-width: 100%;
-height: 10px;
-background-color: #2b5687;
+
+.blue-line {
+  width: 100%;
+  height: 10px;
+  background-color: #2b5687;
 }
-.pink-line{
+
+.pink-line {
   width: 100%;
   height: 10px;
   background-color: #BF5F7C;
 }
 
-img{
+img {
   width: 100%;
   height: auto;
 }
+
 /* tabs */
 .plans-tab-wraper {
   display: flex;
@@ -329,15 +337,14 @@ FORMS: Floating Labels
 
 /* custom selectors */
 
-.form-check{
-  /* margin: auto; */
-  display: flex;
-  /* flex-direction: column; */
+.form-check {
+  padding: 20px 0px 0px 20px;
 }
-.form-check-label{
+
+.form-check-label {
   position: relative;
-  display: inline-block;
-  margin-right: 20px;
+  display: block;
+  padding-bottom: 15px;
 }
 
 .form-check-label input {
@@ -348,7 +355,7 @@ FORMS: Floating Labels
 .form-check-label .inner-label {
   position: relative;
   display: inline-block;
-  padding-left: 40px;
+  padding-left: 27px;
   color: #2b5687;
   transition: color 0.3s ease;
 }
@@ -357,37 +364,43 @@ FORMS: Floating Labels
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
-  border-bottom: 1px solid #2b5687;
-  /* border: 1px solid #2b5687;
-  height: 28px; */
-  width: 30px;
-  transition: border-bottom 0.3s ease;
+  bottom: 3px;
+  border: 1px solid #2b5687;
+  border-radius: 3px;
+  width: 15px;
+  height: 15px;
+  transition: border-color 0.3s ease;
 }
 
-.form-check-label input:checked ~ .inner-label:before {
-  border-bottom: 1px solid #BF5F7C;
+.form-check-label input:checked~.inner-label:before {
+  /* border-color: #BF5F7C; */
+  border: none;
+
 }
+
 /* .form-check-label input:checked ~ .inner-label {
   color: #BF5F7C;
 } */
-.form-check-label input:checked ~ .inner-label:after {
+.form-check-label input:checked~.inner-label:after {
   content: '\2713';
   color: #BF5F7C;
   position: absolute;
   font-size: 25px;
-  left: 8px;
-  top: -10px;
+  left: 0px;
+  top: -12px;
 }
+
 /* VALIDATIONS */
-.was-validated input.ng-invalid{
+.was-validated input.ng-invalid {
   border-color: red;
 }
-.alert{
+
+.alert {
   padding: 0.5rem 0.75rem;
-  color:red;
+  color: red;
   font-size: 0.75rem;
 }
+
 /* PRICE CUSTOM */
 .price-custom,
 .price-body {
@@ -435,7 +448,7 @@ FORMS: Floating Labels
 }
 
 /* OFFERS */
-.offers{
+.offers {
   background-color: rgba(187, 48, 89, 0.4);
   display: flex;
   justify-content: space-around;
@@ -443,7 +456,8 @@ FORMS: Floating Labels
   position: relative;
   border-bottom: 10px solid #2b5687
 }
-.offers::before{
+
+.offers::before,.option-price:before {
   display: block;
   position: absolute;
   content: "";
@@ -451,26 +465,29 @@ FORMS: Floating Labels
   height: 100%;
   left: 0%;
   background-color: rgba(43, 86, 135, 0.4);
-  top:0%;
+  top: 0%;
   z-index: -1;
 }
-.offers .img-holder{
+
+.offers .img-holder {
   width: 70px;
   height: 70px;
 }
 
-.gold .offer-holder{
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-align-items: center;
-text-align: right;
+.gold .offer-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
 }
-.gold .offer-holder p{
+
+.gold .offer-holder p {
   font-size: 1.2rem;
   padding: 5px 0px;
   color: #2b5687;
 }
+
 @media (min-width: 576px) {
   .floating-labels .form-group {
     margin-bottom: 1.563rem;
@@ -561,11 +578,11 @@ text-align: right;
     background-position: 50% 70%;
   }
 
-  .main-content:before{
+  .main-content:before {
     position: absolute;
     display: block;
-    left:0%;
-    bottom:80%;
+    left: 0%;
+    bottom: 80%;
     width: 400px;
     height: 800px;
     z-index: -1;
@@ -627,21 +644,71 @@ text-align: right;
 }
 
 /* custom plan */
-.option-container{
+.option-container {
   padding: 25px 0px;
   display: flex;
   align-items: center;
 }
 
-.label{
+.option-main,.option-price {
+  width: 100%;
+  margin: 0 auto;
+}
+.option-main{
+  background-image: url("../src/assets/img/exercise-bg-3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 
+}
+.option-main .title {
+  font-size: 1.3rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #BF5F7C;
+  display: inline-block;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box-item {
+  padding: 30px 20px;
+  position: relative;
+}
+
+.option-price{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    background-color: rgba(187, 48, 89, 0.4);
+    color: white;
+    border-bottom: 10px solid #2b5687;
+    position: relative;
 }
 
 @media screen and (min-width: 576px) {}
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+  .option-main .option-box {
+    float: left;
+    width: 50%;
+  }
+}
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+  .option-main,.option-price {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 
 @media screen and (min-width: 1200px) {}
 

@@ -22,69 +22,69 @@ export const DATA = {
   options:{
     type:{
       id: 11,
-      name: "Type",
+      name: "type",
       articles: [{
         id: 111,
-        name: "Day Time",
+        name: "day-time",
         price: 25
       }, {
         id: 112,
-        name: "Full Time",
+        name: "full-time",
         price: 36
       }]
     },
     classes:{
       id: 22,
-      name: "Classes",
+      name: "classes",
       articles: [{
         id: 222,
-        name: "Cicling",
+        name: "cicling",
         price: 10
       }, {
         id: 211,
-        name: "Yoga",
+        name: "yoga",
         price: 20
       }, {
         id: 212,
-        name: "Body Pump",
+        name: "body-pump",
         price: 50
       }, {
         id: 213,
-        name: "Aerobic",
+        name: "aerobic",
         price: 70
       }, {
         id: 214,
-        name: "TRX",
+        name: "trx",
         price: 35
       }]
     },
     accesses:{
       id: 33,
-      name: "Accesses",
+      name: "accesses",
       articles: [{
         id: 333,
-        name: "Pool Acces",
+        name: "pool-acces",
         price: 66
       }, {
         id: 331,
-        name: "SPA Acces",
+        name: "spa-acces",
         price: 99
       }]
     },
     personalTrainer:{
       id: 44,
-      name: "Personal Trainer",
+      name: "personal-trainer",
       articles: [{
         id: 444,
-        name: "20 Hours",
+        name: "20-hours",
         price: 10
       }, {
         id: 441,
-        name: "10 Hours",
+        name: "10-hours",
         price: 20
       }, {
         id: 442,
-        name: "5 Hours",
+        name: "5-hours",
         price: 66
       }]
     }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DATA } from './data'
+import { timingSafeEqual } from 'crypto';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,8 @@ export class DataService {
   }
   getAllOptions(){
     return this.options
+  }
+  getOptionByName(name:string){
+    return this.options[name]
   }
 }
