@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { DATA } from './data'
-import { timingSafeEqual } from 'crypto';
 
 @Injectable({
   providedIn: 'root'
