@@ -2,13 +2,13 @@
   <div>
     <p class="subtitle-small text-secondary text-center my-2">Now you can create your own plan in a few clicks</p>
   </div>
-  <div class="option-main clearfix">
+  <div class="option-main clearfix" [formGroup]="planOptions">
     <div class="option-box ">
-      <div class="box-item" >
+      <div class="box-item">
         <div class="title text-blue-dark">Select the type</div>
         <div class="form-check">
-          <label class='form-check-label' *ngFor="let type of optionType.articles">
-            <input name='type' type='radio'>
+          <label class='form-check-label' *ngFor="let type of optionType.articles; let i=index">
+            <input type='radio' formControlName ='type' value={{type.id}} [checked]="i===0" (change)="onRadioBoxChange(type.price)">
             <span class='inner-label'>{{type.name|removeinnerline}}</span>
           </label>
         </div>
@@ -16,8 +16,8 @@
       <div class="box-item">
         <div class="title text-blue-dark">Choose the classes</div>
         <div class="form-check">
-          <label class='form-check-label' *ngFor="let class of optionClasses.articles">
-            <input name={{class.name}} type='checkbox'>
+          <label class='form-check-label' *ngFor="let class of optionClasses.articles; let i=index">
+            <input type='checkbox' value={{class.id}} (change)="onCheckboxChange('classes',$event,class.price)">
             <span class='inner-label'>{{class.name | removeinnerline}}</span>
           </label>
         </div>
@@ -28,7 +28,7 @@
         <div class="title text-blue-dark">Decide where to be more</div>
         <div class="form-check">
           <label class='form-check-label' *ngFor="let access of optionAccesses.articles">
-            <input name={{access.name}} type='checkbox'>
+            <input type='checkbox' value={{access.id}} (change)="onCheckboxChange('accesses',$event,access.price)">
             <span class='inner-label'>{{access.name|removeinnerline}}</span>
           </label>
         </div>
@@ -37,7 +37,7 @@
         <div class="title text-blue-dark">Personal Trainer program</div>
         <div class="form-check">
           <label class='form-check-label' *ngFor="let persTr of optionPeronalTrainer.articles">
-            <input name={{persTr.name}} type='checkbox'>
+            <input type='checkbox' value={{persTr.id}} (change)="onCheckboxChange('peronalTrainer',$event,persTr.price)">
             <span class='inner-label'>{{persTr.name|removeinnerline}}</span>
           </label>
         </div>
@@ -46,9 +46,9 @@
   </div>
   <div class="option-price">
     <div class="title">Total price</div>
-    <div class="title">$ 77 </div>
+    <div class="title">{{price | currency:'USD':'symbol'}}</div>
   </div>
   <div class="col-6  col-lg-4 mx-auto py-5">
-    <app-user-form ></app-user-form>
+    <app-user-form [planHasOptions]="planHasOptions"   [planOptions]='planOptions' (submitted)="resetPlanOptions($event)"></app-user-form>
   </div>
 </div>

@@ -234,7 +234,7 @@ img {
   left: 50%;
   width: 0;
   bottom: 0;
-  height: 1px;
+  height: 2px;
   background-color: #2b5687;
   transition: 0.4;
 }
