@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 html {
   font-size: 100%;
 }
@@ -18,8 +17,25 @@ body {
 h1,
 h2,
 h3 {
-  margin: 50px 0px;
+  margin: 30px 0px;
 }
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+
+  h1,
+  h2,
+  h3 {
+    margin: 50px 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
 
 /* header */
 .main-content:after {
@@ -67,6 +83,7 @@ h3 {
   bottom: 0px;
 }
 
+.img-overlay .title-lg,
 .img-overlay .title-md {
   color: #4679ae
 }
@@ -133,7 +150,7 @@ h3 {
 }
 
 .title {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -211,12 +228,15 @@ img {
   width: 100%;
   height: auto;
 }
-
+.img-holder{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 /* tabs */
 .plans-tab-wraper {
-  display: flex;
+  display: none;
   position: relative;
-  justify-content: space-around;
   background-color: #ebecec;
 }
 
@@ -250,9 +270,6 @@ img {
   transition: 0.4s;
 }
 
-.plan-content {
-  padding: 10px;
-}
 
 .plan {
   align-items: center;
@@ -310,6 +327,7 @@ FORMS: Floating Labels
 
 .floating-labels .form-group {
   position: relative;
+  margin: 20px 0px;
 }
 
 .floating-labels .label-floating {
@@ -448,16 +466,18 @@ FORMS: Floating Labels
 }
 
 /* OFFERS */
+
 .offers {
   background-color: rgba(187, 48, 89, 0.4);
-  display: flex;
-  justify-content: space-around;
+  display: none;
   padding: 25px 0px;
   position: relative;
   border-bottom: 10px solid #2b5687
 }
 
-.offers::before,.option-price:before {
+.offers::before,
+.option-price:before ,
+.offer-card .card-body::before{
   display: block;
   position: absolute;
   content: "";
@@ -476,10 +496,8 @@ FORMS: Floating Labels
 
 .gold .offer-holder {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: right;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .gold .offer-holder p {
@@ -488,15 +506,11 @@ FORMS: Floating Labels
   color: #2b5687;
 }
 
-@media (min-width: 576px) {
+
+@media screen and (min-width: 576px) {
   .floating-labels .form-group {
     margin-bottom: 1.563rem;
   }
-}
-
-
-@media screen and (min-width: 576px) {
-
 
   .title-lg {
     font-size: 1.875rem;
@@ -513,12 +527,28 @@ FORMS: Floating Labels
 }
 
 @media screen and (min-width: 768px) {
+  .title {
+    font-size: 1.5625rem;
+  }
+  
+  .offers-sm{
+    display: none;
+  }
+  .offers {
+    display: flex;
+    justify-content: space-around;
 
+  }
+  .plan-content {
+    padding: 10px;
+  }
+  
   .img-overlay {
     margin-top: -280px;
     position: relative;
   }
 
+  .img-overlay .title-lg,
   .img-overlay .title-md {
     color: #ffffff
   }
@@ -540,42 +570,10 @@ FORMS: Floating Labels
     display: block;
   }
 
-}
+  .plans-tab-wraper {
+    display: flex;
+    justify-content: space-around;
 
-@media screen and (min-width: 992px) {
-
-
-  .img-overlay {
-    margin-top: -400px;
-    position: relative;
-  }
-
-  .title-lg {
-    font-size: 3.125rem;
-  }
-
-  .title-md {
-    font-size: 2.4rem;
-  }
-
-  .subtitle {
-    font-size: 1.875rem;
-    font-weight: 300;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header-wrapper {
-    background-position: 20% 0%;
-  }
-
-  .img-overlay {
-    margin-top: -500px;
-    position: relative;
-  }
-
-  .footer {
-    background-position: 50% 70%;
   }
 
   .main-content:before {
@@ -591,6 +589,46 @@ FORMS: Floating Labels
     border-top-right-radius: 800px;
     content: "";
   }
+
+  .gold .offer-holder {
+    text-align: right;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+
+  .img-overlay {
+    margin-top: -600px;
+    position: relative;
+  }
+
+  .title-lg {
+    font-size: 3.125rem;
+  }
+
+  .title-md {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.875rem;
+    font-weight: 300;
+  }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+  .header-wrapper {
+    background-position: 20% 0%;
+  }
+  .footer {
+    background-position: 50% 70%;
+  }
+
+
 }
 
 @media screen and (min-width: 1400px) {
@@ -650,19 +688,16 @@ FORMS: Floating Labels
   align-items: center;
 }
 
-.option-main,.option-price {
+.option-main,
+.option-price {
   width: 100%;
   margin: 0 auto;
 }
-.option-main{
-  background-image: url("../src/assets/img/exercise-bg-3.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 
-}
+
+
 .option-main .title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-bottom: 2px;
   border-bottom: 2px solid #BF5F7C;
   display: inline-block;
@@ -683,28 +718,45 @@ FORMS: Floating Labels
   position: relative;
 }
 
-.option-price{
+.option-price {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 20px;
-    background-color: rgba(187, 48, 89, 0.4);
-    color: white;
-    border-bottom: 10px solid #2b5687;
-    position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: rgba(187, 48, 89, 0.4);
+  color: white;
+  border-bottom: 10px solid #2b5687;
+  position: relative;
 }
 
-@media screen and (min-width: 576px) {}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .option-main .option-box {
     float: left;
     width: 50%;
   }
+  .option-main .title {
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .option-main {
+    background-image: url("../src/assets/img/exercise-bg-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  
+  }
+  .option-main .title {
+    font-size: 1.3rem;
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .option-main,.option-price {
+
+  .option-main,
+  .option-price {
     width: 80%;
     margin: 0 auto;
   }
@@ -713,3 +765,69 @@ FORMS: Floating Labels
 @media screen and (min-width: 1200px) {}
 
 @media screen and (min-width: 1400px) {}
+
+/* custom select */
+.select-container{
+  border-bottom: 2px solid #bf5f7c;
+  display: flex;
+  justify-content: center;
+}
+.select-holder {
+  position: relative;
+  display: inline-block;
+}
+.select-holder span{
+  position: absolute;
+  top: 15px;
+  right: 2%;
+}
+.custom-select {
+  border: none;
+  font-size: 30px;
+  padding: 10px 30px;
+  outline: none;
+  background: transparent;
+  appearance: none;
+  overflow: hidden;
+  color: #2b5687;
+}
+.custom-select:focus{
+  outline: none;
+}
+
+.custom-select option{
+  font-size: 18px;
+  outline: none;
+  background: rgba(191, 95, 124, 0.2);
+  appearance: none;
+}
+.custom-select option:focus{
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .select-container{
+display: none;
+  }
+}
+
+
+/* Carusel */
+.offer-card{
+ position: relative;
+ margin: 0.3rem;
+}
+
+.offer-card .card-body{
+  background-color: rgba(187, 48, 89, 0.4);
+  padding: 0.1rem;
+  border-bottom: 5px solid #2b5687;
+}
+.offer-card .card-body .img-holder{
+  width: 70px;
+  height: 70px;
+}
+
+body .ui-carousel .ui-carousel-dots-container .ui-carousel-dot-item.ui-state-highlight .ui-carousel-dot-icon {
+  background-color: #2b5687;
+}

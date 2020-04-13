@@ -20,30 +20,26 @@
   </div>
   <div class="col-6 my-2 ">
     <div class="title text-center text-blue-dark py-2">And much more offers</div>
+    <div class="offers-sm">
+      <p-carousel [value]="offers" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+        <ng-template let-offer pTemplate="item">
+          <div class="offer-card">
+            <div class="card-body">
+              <div class="img-holder mx-auto"><img src={{offer.imgUrl}} alt=""></div>
+              <p class="text-white text-center">{{offer.name | removeinnerline}}</p>
+            </div>  
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
     <div class="offers">
-      <div>
-        <div class="img-holder mx-auto"><img src="../assets/img/1-studio-de-pilates.png" alt=""></div>
-        <p class="text-white text-center">Pilate Classes</p>
-      </div>
-      <div>
-        <div class="img-holder mx-auto"><img src="../assets/img/clase-de-inot-pentru-copii.png" alt=""></div>
-        <p class="text-white text-center">Swimming classes</p>
-      </div>
-      <div>
-        <div class="img-holder mx-auto"><img src="../assets/img/42-de-studiouri-de-aerobic.png" alt=""></div>
-        <p class="text-white text-center">Cardio  Classes</p>
-      </div>
-      <div>
-        <div class="img-holder mx-auto"><img src="../assets/img/zone-de-relaxare.png" alt=""></div>
-        <p class="text-white text-center">Relax Area</p>
-      </div>
-      <div>
-        <div class="img-holder mx-auto"><img src="../assets/img/saune-umede.png" alt=""></div>
-        <p class="text-white text-center">Wet saunas</p>
+      <div *ngFor="let offer of offers">
+        <div class="img-holder mx-auto"><img src={{offer.imgUrl}} alt=""></div>
+        <p class="text-white text-center">{{offer.name | removeinnerline}}</p>
       </div>
     </div>
   </div>
   <div class="col-6  col-lg-4 mx-auto py-5">
-    <app-user-form ></app-user-form>
+    <app-user-form></app-user-form>
   </div>
 </div>

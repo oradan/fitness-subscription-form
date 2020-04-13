@@ -14,8 +14,6 @@ export class SharedService {
     this.planId.next(id)
   }
 
-  constructor(public dataServive:DataService) { 
-
-  }
+  constructor(public dataServive:DataService) {}
 
 }

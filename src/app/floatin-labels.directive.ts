@@ -19,7 +19,7 @@ export class FloatinLabelsDirective implements OnInit {
   };
   @HostListener('focus') onFocus() { this.addClassFocused() }
   @HostListener('blur') onBlur() { this.removeClassFocused() }
-  @HostListener('change') onChange() { this.initDirective(); console.log("change")}
+  @HostListener('change') onChange() { this.initDirective()}
   //this.bindingEl[propName].length > 0 in case when the filds are prefield by another service
   private initDirective() {
     let propName = this.elRef.nativeElement.name;

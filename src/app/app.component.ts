@@ -3,7 +3,6 @@ import { Plan } from './plan';
 import { DataService } from './data.service';
 import { SharedService } from './shared.service';
 import { Subscription } from 'rxjs';
-import { Option } from './option';
 
 @Component({
   selector: 'app-root',
@@ -24,9 +23,12 @@ export class AppComponent implements OnInit {
       }
     )
   }
-  setSelectedPlan(plan: Plan) {
-    this.selectedPlan = plan;
-    this.sharedService.setPlanId(plan.id)
+  value(plan:Plan){
+    console.log(plan)
+  }
+  setSelectedPlan(planId: Plan) {
+    this.selectedPlan = this.plans.find((e)=>e.id===+planId)
+    this.sharedService.setPlanId(+planId)
   }
   
   ngOnInit(): void {

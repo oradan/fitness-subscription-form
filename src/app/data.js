@@ -1,6 +1,6 @@
 
 export const DATA = {
-  defaultPlanId:4,
+  defaultPlanId:2,
   plans:[
     {
       id: 1,
@@ -88,75 +88,13 @@ export const DATA = {
         price: 66
       }]
     }
-    }
-//   options: [{
-//     id: 11,
-//     name: "Type",
-//     articles: [{
-//       id: 111,
-//       name: "Day Time",
-//       price: 25
-//     }, {
-//       id: 112,
-//       name: "Full Time",
-//       price: 36
-//     }]
-//   },
-//   {
-//     id: 22,
-//     name: "Classes",
-//     articles: [{
-//       id: 222,
-//       name: "Cicling",
-//       price: 10
-//     }, {
-//       id: 211,
-//       name: "Yoga",
-//       price: 20
-//     }, {
-//       id: 212,
-//       name: "Body Pump",
-//       price: 50
-//     }, {
-//       id: 213,
-//       name: "Aerobic",
-//       price: 70
-//     }, {
-//       id: 214,
-//       name: "TRX",
-//       price: 35
-//     }]
-//   },
-//   {
-//     id: 33,
-//     name: "Accesses",
-//     articles: [{
-//       id: 333,
-//       name: "Pool Acces",
-//       price: 66
-//     }, {
-//       id: 331,
-//       name: "SPA Acces",
-//       price: 99
-//     }]
-//   },
-//   {
-//     id: 44,
-//     name: "Personal Trainer",
-//     articles: [{
-//       id: 444,
-//       name: "20 Hours",
-//       price: 10
-//     }, {
-//       id: 441,
-//       name: "10 Hours",
-//       price: 20
-//     }, {
-//       id: 442,
-//       name: "5 Hours",
-//       price: 66
-//     }]
-//   }
-// ]
+    },
+  offers:[
+    {name:"pilate-classes",imgUrl:"../assets/img/1-studio-de-pilates.png"},
+    {name:"swimming",imgUrl:"../assets/img/clase-de-inot-pentru-copii.png"},
+    {name:"cardio-classes",imgUrl:"../assets/img/42-de-studiouri-de-aerobic.png"},
+    {name:"relax-area",imgUrl:"../assets/img/zone-de-relaxare.png"},
+    {name:"wet-saunas",imgUrl:"../assets/img/saune-umede.png"}
+  ]
 }
 

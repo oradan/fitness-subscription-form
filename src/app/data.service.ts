@@ -7,6 +7,7 @@ import { DATA } from './data'
 export class DataService {
   plans = DATA.plans
   options = DATA.options
+  offers = DATA.offers
   constructor() {}
 
   defaultPlanId() {
@@ -24,5 +25,8 @@ export class DataService {
   }
   getOptionByName(name:string){
     return this.options[name]
+  }
+  getAllOffers(){
+    return this.offers
   }
 }
