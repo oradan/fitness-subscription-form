@@ -26,6 +26,11 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
+              "src/assets/css/colors.css",
+              "src/assets/css/titles.css",
+              "src/assets/css/utilities.css",
+              "src/assets/css/forms.css",
+              "src/assets/css/lists.css",
               "src/assets/css/grid.css",
               "src/styles.css"
             ],

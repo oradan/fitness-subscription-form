@@ -1,0 +1,45 @@
+.text-white {
+  color: #ffffff
+}
+
+.text-secondary {
+  color: #BF5F7C;
+}
+
+.text-blue-primary {
+  color: #4679ae;
+}
+
+.text-blue-dark {
+  color: #2b5687
+}
+
+.bg-blue-default {
+  background-color: #2b5687
+}
+
+.bg-blue-silver {
+  background-color: #77a3d4
+}
+
+.bg-blue-gold {
+  background-color: #1f3e61
+}
+
+.bg-blue-custom {
+  background-color: #376fae
+}
+
+.bg-pink-light {
+  background-color: rgba(191, 95, 124, 0.2)
+}
+
+.bg-blue-light {
+  background-color: rgba(62, 103, 146, 0.6);
+}
+
+@media screen and (min-width: 576px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 992px) {}
+@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1400px) {}

@@ -1,0 +1,71 @@
+.title-lg {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.title-md {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.subtitle-small {
+  font-size: 1.2rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 576px) {
+  .title-lg {
+    font-size: 1.875rem;
+  }
+  .title-md {
+    font-size: 1.75rem;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 1.5625rem;
+  }
+
+  .title-lg {
+    font-size: 2.8125rem;
+  }
+  .title-md {
+    font-size: 2.1875rem;
+  }
+  .subtitle {
+    font-size: 1.625rem;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title-lg {
+    font-size: 3.125rem;
+  }
+  .title-md {
+    font-size: 2.4rem;
+  }
+  .subtitle {
+    font-size: 1.875rem;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1400px) {
+  .title-lg {
+    font-size: 3.75rem;
+  }
+}
+

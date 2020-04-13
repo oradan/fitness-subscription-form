@@ -25,7 +25,7 @@
         <ng-template let-offer pTemplate="item">
           <div class="offer-card">
             <div class="card-body">
-              <div class="img-holder mx-auto"><img src={{offer.imgUrl}} alt=""></div>
+              <div class="img-holder mx-auto"><img src={{offer.imgUrl}} alt="" class="img-fluid"></div>
               <p class="text-white text-center">{{offer.name | removeinnerline}}</p>
             </div>  
           </div>
@@ -34,7 +34,7 @@
     </div>
     <div class="offers">
       <div *ngFor="let offer of offers">
-        <div class="img-holder mx-auto"><img src={{offer.imgUrl}} alt=""></div>
+        <div class="img-holder mx-auto"><img src={{offer.imgUrl}} alt="" class="img-fluid"></div>
         <p class="text-white text-center">{{offer.name | removeinnerline}}</p>
       </div>
     </div>

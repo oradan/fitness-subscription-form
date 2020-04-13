@@ -1,0 +1,78 @@
+
+.option-main,
+.option-price {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.option-main .title {
+  font-size: 1.2rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #BF5F7C;
+  display: inline-block;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box-item {
+  padding: 30px 20px;
+  position: relative;
+}
+
+.option-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: rgba(187, 48, 89, 0.4);
+  color: white;
+  border-bottom: 10px solid #2b5687;
+  position: relative;
+}
+
+@media screen and (min-width: 576px) {
+  .option-main .option-box {
+    float: left;
+    width: 50%;
+  }
+  .option-main .title {
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .option-main {
+    background-image: url("src/assets/img/exercise-bg-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  
+  }
+  .option-main .title {
+    font-size: 1.3rem;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .option-main,
+  .option-price {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

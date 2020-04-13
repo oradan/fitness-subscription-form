@@ -1,0 +1,25 @@
+
+.ul-check-icon {
+  list-style: none;
+}
+
+.ul-check-icon li {
+  padding-left: 1.7rem;
+  position: relative;
+  font-size: 1.125rem;
+  margin: 10px 0px;
+}
+
+.ul-check-icon li::before {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 20px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 14'%3e%3cpath fill='rgba(43, 86, 135, 1)' d='M5.917,13.264 C4.181,11.466 2.445,9.668 0.710,7.870 C-0.004,7.129 1.157,6.025 1.874,6.769 C3.418,8.369 4.962,9.969 6.507,11.569 C8.105,9.961 14.938,2.248 16.537,0.639 C17.265,-0.093 18.426,1.011 17.700,1.741 C15.905,3.547 8.876,11.458 7.081,13.264 C6.782,13.563 6.212,13.570 5.917,13.264 Z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  content: "";
+}
+
